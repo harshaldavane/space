@@ -2,9 +2,11 @@
 
   background-color: black;
   background: url(../../assets/home/Bitmap.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100vw;
+  height: 100vh;
+  width: 100%;
 }
