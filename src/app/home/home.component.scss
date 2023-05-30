@@ -10,3 +10,19 @@
   height: 100vh;
   width: 100%;
 }
+
+.circle:hover + .backround-circle{
+background-color: #979797;
+width: 350px;
+height: 350px;
+transition: 1s ease-out;
+}
+
+@media (max-width:750px) {
+  .backgroundImage{
+    background: url(../../assets/home/background-home-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+/* #region */
