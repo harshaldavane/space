@@ -5,21 +5,18 @@
 <p><span>01</span>pick your best destination</p>
 <div class="banner-section">
   <div class="main-content-area flex justify-around items-center">
-    <div class="imageSection">
+    <div class="imageSection flex-1 text-center">
       <img class="w-[350px] h-[350px]" src="../../assets/destination/image-moon.webp" alt="">
     </div>
-    <div class="tabs text-white">
-      <ul class="font-BarlowCondensed text-[16px] flex justify-start">
-        <li class="tabs tracking-[2px]" onclick="moon()">Moon</li>
-        <li class="tabs mx-2 tracking-[2px]">Marse</li>
-        <li class="tabs mx-2 tracking-[2px]">Europa</li>
-        <li class="tabs mx-2 tracking-[2px]">Titan</li>
+    <div class="tabs text-white flex-1 justify-items-center">
+      <ul class="py-6 font-BarlowCondensed text-[16px] flex justify-start">
+        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer" (click)="moon()">Moon</li>
+        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer">Marse</li>
+        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer">Europa</li>
+        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer">Titan</li>
       </ul>
-      <p class="text-[70px] my-[20px] uppercase font-Bellefair">Moon</p>
-      <p class="font-Barlow">See our planet as you’ve never seen it before. A perfect
-        <br>relaxing trip away to help regain perspective and come
-        <br> back refreshed. While you’re there, take in some history
-        <br>by visiting the Luna 2 and Apollo 11 landing sites.</p>
+      <p class="text-[70px] mt-2 my-[20px] uppercase font-Bellefair">Moon</p>
+      <p class="font-Barlow">{{text}}</p>
         <div class="wraperDistance flex justify-start justify-items-center my-12">
         <div class="km ">
           <p class="font-BarlowCondensed text-[12px] text-[#D0D6F9] tracking-[2px]">AVG. DISTANCE</p>
@@ -34,3 +31,6 @@
   </div>
 </div>
 </main>
+<ul>
+  <li *ngFor="let item of countriesList">{{item.name}}</li>
+</ul>
