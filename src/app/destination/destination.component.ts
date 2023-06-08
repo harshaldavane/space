@@ -10,12 +10,23 @@ import DataJson from '../../assets/data.json';
 
 
 export class DestinationComponent {
+    arrayData: any = [];
+    headerVal:String =this.arrayData.
+    moonImgAdd:String = ""
+    moonDescription = ""
+    distance:String = ""
+    constructor(){
+    this.arrayData = DataJson;
+    console.log(this.arrayData.destinations[0].name);
 
-  countriesList:any[] = DataJson;
-
-  text:String="";
-  moon(){
-   this.text="Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!";
   }
-}
 
+  mars(){
+   this.headerVal = this.arrayData.destinations[1].name
+   this.moonImgAdd = this.arrayData.destinations[1].images.png
+   this.moonDescription = this.arrayData.description
+   this.distance = ""
+  }
+
+
+}

@@ -5,26 +5,26 @@
 <p><span>01</span>pick your best destination</p>
 <div class="banner-section">
   <div class="main-content-area flex justify-around items-center">
-    <div class="imageSection flex-1 text-center">
-      <img class="w-[350px] h-[350px]" src="../../assets/destination/image-moon.webp" alt="">
+    <div class="imageSection flex-1 text-center flex justify-center items-center">
+      <img class="w-[350px] h-[350px]" src="{{arrayData.destinations[0].images.png}}" alt="">
     </div>
-    <div class="tabs text-white flex-1 justify-items-center">
+    <div class="tabs text-white flex-1 justify-items-center ">
       <ul class="py-6 font-BarlowCondensed text-[16px] flex justify-start">
-        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer" (click)="moon()">Moon</li>
-        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer">Marse</li>
-        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer">Europa</li>
-        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer">Titan</li>
+        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer">{{arrayData.destinations[0].name}}</li>
+        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer" (click)="mars()">{{arrayData.destinations[1].name}}</li>
+        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer">{{arrayData.destinations[2].name}}</li>
+        <li class="tabs mx-2 tracking-[2px]  hover:border-b-2 cursor-pointer">{{arrayData.destinations[3].name}}</li>
       </ul>
-      <p class="text-[70px] mt-2 my-[20px] uppercase font-Bellefair">Moon</p>
-      <p class="font-Barlow">{{text}}</p>
+      <p class="text-[70px] mt-2 my-[20px] uppercase font-Bellefair">{{arrayData.destinations[0].name}}</p>
+      <p class="font-Barlow max-w-[400px] text-justify">{{arrayData.destinations[0].description}}</p>
         <div class="wraperDistance flex justify-start justify-items-center my-12">
         <div class="km ">
           <p class="font-BarlowCondensed text-[12px] text-[#D0D6F9] tracking-[2px]">AVG. DISTANCE</p>
-          <p class="font-Bellefair text-[22px] text-white"  >384,400 km</p>
+          <p class="font-Bellefair text-[22px] text-white"  >{{arrayData.destinations[0].distance}}</p>
         </div>
         <div class="days mx-12">
           <p class="font-BarlowCondensed text-[12px] text-[#D0D6F9] tracking-[2px]">Est. travel time</p>
-          <p class="font-Bellefair text-[22px] text-white">3 days</p>
+          <p class="font-Bellefair text-[22px] text-white">{{arrayData.destinations[0].travel}}</p>
         </div>
       </div>
     </div>
@@ -32,5 +32,5 @@
 </div>
 </main>
 <ul>
-  <li *ngFor="let item of countriesList">{{item.name}}</li>
+  <!-- <li *ngFor="let item of countriesList">{{item.name}}</li> -->
 </ul>
